@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>AI Horoscope | Personalized Future Prediction Online</title>
+    <meta
+      name="description"
+      content="Discover what your future holds with AI-powered personalized horoscopes based on your unique birth details. Get instant insights into love, career, and money."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a href="#hero" class="logo" aria-label="AI Horoscope Home">
+            <span class="logo__icon">✦</span>
+            <span class="logo__text">HorroScope AI</span>
+          </a>
+          <nav class="nav" aria-label="Primary">
+            <button
+              class="nav__toggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="nav__list">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#problem">Problems</a></li>
+              <li><a href="#solution">How It Works</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#testimonials">Results</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </nav>
+          <button
+            class="btn btn--ghost header-cta"
+            type="button"
+            data-open-modal
+          >
+            Get Free Report
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero -->
+        <section id="hero" class="hero" aria-labelledby="hero-title">
+          <div class="hero__overlay"></div>
+          <div class="hero__content container">
+            <div class="hero__text">
+              <p class="hero__eyebrow">AI-Powered Astrology</p>
+              <h1 id="hero-title" class="hero__title">
+                Discover What Your Future Holds Instantly
+              </h1>
+              <p class="hero__subtitle">
+                Get your AI-powered personalized horoscope based on your birth
+                details. Instant insights into love, career, and money crafted
+                just for you.
+              </p>
+              <div class="hero__actions">
+                <button
+                  class="btn btn--primary btn--lg"
+                  type="button"
+                  data-open-modal
+                >
+                  Get My Free Future Report
+                </button>
+                <p class="hero__note">No credit card required.</p>
+              </div>
+            </div>
+            <div class="hero__visual" aria-hidden="true">
+              <div class="hero-orbit">
+                <div class="hero-orbit__glow"></div>
+                <div class="hero-orbit__sphere"></div>
+                <div class="hero-orbit__ring hero-orbit__ring--outer"></div>
+                <div class="hero-orbit__ring hero-orbit__ring--inner"></div>
+              </div>
+              <div class="hero__zodiac-strip">
+                <span>♈︎</span><span>♉︎</span><span>♊︎</span><span>♋︎</span
+                ><span>♌︎</span><span>♍︎</span><span>♎︎</span><span>♏︎</span
+                ><span>♐︎</span><span>♑︎</span><span>♒︎</span><span>♓︎</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Problem -->
+        <section
+          id="problem"
+          class="section section--problem"
+          aria-labelledby="problem-title"
+        >
+          <div class="container section__inner section__inner--two-col">
+            <div>
+              <h2 id="problem-title" class="section__title">
+                Confused About Your Career, Love, or Money?
+              </h2>
+              <p class="section__subtitle">
+                Life decisions feel heavier when the future looks blurry. Most
+                horoscopes are vague, generic, and never truly about you.
+              </p>
+            </div>
+            <div class="problem__grid">
+              <article class="problem-card">
+                <h3>Uncertain future?</h3>
+                <p>
+                  Struggling to see where your career, relationships, or
+                  finances are really headed?
+                </p>
+              </article>
+              <article class="problem-card">
+                <h3>Relationship doubts?</h3>
+                <p>
+                  Wondering if you are truly aligned with your partner or if
+                  someone new is on the horizon?
+                </p>
+              </article>
+              <article class="problem-card">
+                <h3>Financial stress?</h3>
+                <p>
+                  Feeling stuck in repeating money patterns and craving a clear
+                  energetic forecast?
+                </p>
+              </article>
+              <article class="problem-card">
+                <h3>Generic predictions?</h3>
+                <p>
+                  Tired of copy-paste horoscopes that could apply to anyone,
+                  not the real you?
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Solution -->
+        <section
+          id="solution"
+          class="section section--solution"
+          aria-labelledby="solution-title"
+        >
+          <div class="container section__inner">
+            <div class="section__header">
+              <h2 id="solution-title" class="section__title">
+                Your Personalized AI Future Analysis
+              </h2>
+              <p class="section__subtitle">
+                We combine ancient astrological wisdom with cutting-edge AI to
+                decode your unique birth blueprint and project your energetic
+                trends.
+              </p>
+            </div>
+            <div class="solution__grid">
+              <article class="solution-item">
+                <div class="solution-item__icon solution-item__icon--pulse">
+                  ✦
+                </div>
+                <h3>Based on your birth details</h3>
+                <p>
+                  Enter your date, time, and place of birth to unlock a reading
+                  tailored exclusively to you.
+                </p>
+              </article>
+              <article class="solution-item">
+                <div class="solution-item__icon solution-item__icon--orbit">
+                  ☉
+                </div>
+                <h3>AI-driven insights</h3>
+                <p>
+                  Our AI scans thousands of astrological patterns to surface the
+                  signals that matter most right now.
+                </p>
+              </article>
+              <article class="solution-item">
+                <div class="solution-item__icon solution-item__icon--glow">
+                  ⚡
+                </div>
+                <h3>Instant, actionable results</h3>
+                <p>
+                  Receive a concise, focused overview of your coming weeks in
+                  love, money, and purpose.
+                </p>
+              </article>
+              <article class="solution-item">
+                <div class="solution-item__icon solution-item__icon--wave">
+                  ☾
+                </div>
+                <h3>Easy to understand</h3>
+                <p>
+                  No astrology jargon. Just clear explanations and gentle
+                  guidance you can actually use.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services -->
+        <section
+          id="services"
+          class="section section--services"
+          aria-labelledby="services-title"
+        >
+          <div class="container section__inner">
+            <div class="section__header">
+              <h2 id="services-title" class="section__title">
+                Explore Your Cosmic Services
+              </h2>
+              <p class="section__subtitle">
+                Start with your free future report and unlock deeper guidance
+                whenever you are ready.
+              </p>
+            </div>
+            <div class="services__grid">
+              <article class="service-card">
+                <div class="service-card__icon">☀</div>
+                <h3>Personalized Horoscope Report</h3>
+                <p>
+                  A tailored overview of the key themes shaping your upcoming
+                  weeks and months.
+                </p>
+              </article>
+              <article class="service-card">
+                <div class="service-card__icon">❤</div>
+                <h3>Love Compatibility Checker</h3>
+                <p>
+                  Understand the energetic chemistry between you and your
+                  current or future partner.
+                </p>
+              </article>
+              <article class="service-card">
+                <div class="service-card__icon">⚝</div>
+                <h3>7-Day Energy Forecast</h3>
+                <p>
+                  Day-by-day energetic guidance to plan important conversations,
+                  launches, and decisions.
+                </p>
+              </article>
+              <article class="service-card">
+                <div class="service-card__icon">✶</div>
+                <h3>Premium Detailed Birth Chart</h3>
+                <p>
+                  A deep cosmic blueprint unpacking your strengths, lessons, and
+                  soul-level patterns.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section
+          id="testimonials"
+          class="section section--testimonials"
+          aria-labelledby="testimonials-title"
+        >
+          <div class="container section__inner">
+            <div class="section__header">
+              <h2 id="testimonials-title" class="section__title">
+                Loved by Seekers Worldwide
+              </h2>
+              <p class="section__subtitle">
+                See how others are using AI-powered insights to move forward
+                with clarity and confidence.
+              </p>
+            </div>
+            <div class="testimonials">
+              <div class="testimonials__track" data-testimonial-track>
+                <article class="testimonial-card">
+                  <p class="testimonial-card__text">
+                    “I was skeptical, but the report described my career
+                    crossroads perfectly and helped me finally choose a path.”
+                  </p>
+                  <p class="testimonial-card__name">Aarav, 29</p>
+                  <div class="testimonial-card__rating" aria-label="5 star rating">
+                    ★★★★★
+                  </div>
+                </article>
+                <article class="testimonial-card">
+                  <p class="testimonial-card__text">
+                    “The love insights were so accurate it felt like the AI
+                    knew my relationship history better than I did.”
+                  </p>
+                  <p class="testimonial-card__name">Mia, 26</p>
+                  <div class="testimonial-card__rating" aria-label="5 star rating">
+                    ★★★★★
+                  </div>
+                </article>
+                <article class="testimonial-card">
+                  <p class="testimonial-card__text">
+                    “I check my 7-day energy forecast every Sunday now. It’s
+                    like a weather report for my mood and money.”
+                  </p>
+                  <p class="testimonial-card__name">Rahul, 34</p>
+                  <div class="testimonial-card__rating" aria-label="5 star rating">
+                    ★★★★★
+                  </div>
+                </article>
+              </div>
+              <div class="testimonials__controls" aria-hidden="true">
+                <button
+                  class="testimonials__arrow testimonials__arrow--prev"
+                  type="button"
+                  data-testimonial-prev
+                >
+                  ‹
+                </button>
+                <div class="testimonials__dots" data-testimonial-dots></div>
+                <button
+                  class="testimonials__arrow testimonials__arrow--next"
+                  type="button"
+                  data-testimonial-next
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section
+          id="faq"
+          class="section section--faq"
+          aria-labelledby="faq-title"
+        >
+          <div class="container section__inner">
+            <div class="section__header">
+              <h2 id="faq-title" class="section__title">
+                Frequently Asked Questions
+              </h2>
+              <p class="section__subtitle">
+                Everything you need to know before unlocking your free future
+                report.
+              </p>
+            </div>
+            <div class="faq" role="list">
+              <article class="faq-item">
+                <button
+                  class="faq-item__question"
+                  aria-expanded="false"
+                  aria-controls="faq-1"
+                >
+                  How is this different from a normal horoscope?
+                  <span class="faq-item__chevron"></span>
+                </button>
+                <div
+                  id="faq-1"
+                  class="faq-item__answer"
+                  role="region"
+                  aria-hidden="true"
+                >
+                  <p>
+                    Traditional horoscopes are written for broad sun signs. Our
+                    system uses AI to interpret your complete birth chart and
+                    current transits for far more specific guidance.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button
+                  class="faq-item__question"
+                  aria-expanded="false"
+                  aria-controls="faq-2"
+                >
+                  Is my information secure and private?
+                  <span class="faq-item__chevron"></span>
+                </button>
+                <div
+                  id="faq-2"
+                  class="faq-item__answer"
+                  role="region"
+                  aria-hidden="true"
+                >
+                  <p>
+                    Yes. Your details are used only to generate your report and
+                    will never be shared or sold to third parties.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button
+                  class="faq-item__question"
+                  aria-expanded="false"
+                  aria-controls="faq-3"
+                >
+                  Do I need my exact birth time?
+                  <span class="faq-item__chevron"></span>
+                </button>
+                <div
+                  id="faq-3"
+                  class="faq-item__answer"
+                  role="region"
+                  aria-hidden="true"
+                >
+                  <p>
+                    You will get the most accurate insights with your exact
+                    birth time, but you can still receive a powerful reading
+                    without it.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button
+                  class="faq-item__question"
+                  aria-expanded="false"
+                  aria-controls="faq-4"
+                >
+                  Is this meant to replace professional advice?
+                  <span class="faq-item__chevron"></span>
+                </button>
+                <div
+                  id="faq-4"
+                  class="faq-item__answer"
+                  role="region"
+                  aria-hidden="true"
+                >
+                  <p>
+                    No. Our readings are for insight and reflection only, not a
+                    substitute for medical, legal, or financial advice.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section section--final-cta">
+          <div class="container section__inner section__inner--center">
+            <h2 class="section__title">
+              Your Future Is Waiting To Be Discovered
+            </h2>
+            <p class="section__subtitle">
+              Take 30 seconds to share your details and receive a personalized
+              glimpse into your next chapter.
+            </p>
+            <button
+              class="btn btn--primary btn--lg"
+              type="button"
+              data-open-modal
+            >
+              Unlock My Future Now
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="site-footer__brand">
+            <span class="logo__icon">✦</span>
+            <span class="logo__text">HorroScope AI</span>
+            <p class="site-footer__about">
+              AI-powered astrological insights designed to help you move
+              forward with more clarity, confidence, and self-trust.
+            </p>
+          </div>
+          <div class="site-footer__links">
+            <a href="#about">About</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p class="site-footer__disclaimer">
+            This website provides astrological insights for entertainment
+            purposes only. It is not a substitute for professional medical,
+            legal, financial, or psychological advice.
+          </p>
+          <p class="site-footer__copyright">
+            © <span id="year"></span> HorroScope AI. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Lead Capture Modal -->
+    <div
+      class="modal-backdrop"
+      data-modal-backdrop
+      aria-hidden="true"
+    >
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lead-modal-title"
+        aria-describedby="lead-modal-desc"
+      >
+        <button
+          type="button"
+          class="modal__close"
+          aria-label="Close lead capture form"
+          data-close-modal
+        >
+          ×
+        </button>
+        <div class="modal__content">
+          <h2 id="lead-modal-title">Get Your Free Future Report</h2>
+          <p id="lead-modal-desc" class="modal__subtitle">
+            Share a few details so our AI can generate a personalized
+            horoscope-style glimpse into your upcoming chapters.
+          </p>
+          <form id="lead-form" class="form" novalidate>
+            <div class="form__field">
+              <label for="full-name">Full Name</label>
+              <input
+                id="full-name"
+                name="fullName"
+                type="text"
+                required
+                autocomplete="name"
+                placeholder="Enter your full name"
+              />
+              <p class="form__error" data-error-for="full-name"></p>
+            </div>
+            <div class="form__field">
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                inputmode="tel"
+                autocomplete="tel"
+                placeholder="+91 98765 43210"
+              />
+              <p class="form__error" data-error-for="phone"></p>
+            </div>
+            <div class="form__field">
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="you@example.com"
+              />
+              <p class="form__error" data-error-for="email"></p>
+            </div>
+            <input
+              type="hidden"
+              name="why"
+              value="Requested Free Horoscope Report"
+            />
+            <button class="btn btn--primary btn--full" type="submit">
+              Generate My Free Report
+            </button>
+          </form>
+          <p
+            id="lead-success"
+            class="form__success"
+            aria-live="polite"
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
+
