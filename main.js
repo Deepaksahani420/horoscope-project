@@ -101,6 +101,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ================= MOBILE NAV TOGGLE ================= */
+  const navToggle = document.querySelector(".nav__toggle");
+  const navList = document.querySelector(".nav__list");
+  const siteHeader = document.querySelector(".site-header");
+  if (navToggle && navList) {
+    navToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = navList.classList.toggle("nav__list--open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      siteHeader?.classList.toggle("nav-open", isOpen);
+    });
+    navList.querySelectorAll("a, .nav__cta-btn").forEach((el) => {
+      el.addEventListener("click", () => {
+        navList.classList.remove("nav__list--open");
+        navToggle.setAttribute("aria-expanded", "false");
+        siteHeader?.classList.remove("nav-open");
+      });
+    });
+    document.addEventListener("click", (e) => {
+      if (!navList.contains(e.target) && !navToggle.contains(e.target)) {
+        navList.classList.remove("nav__list--open");
+        navToggle.setAttribute("aria-expanded", "false");
+        siteHeader?.classList.remove("nav-open");
+      }
+    });
+  }
+
   /* ================= YEAR ================= */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
