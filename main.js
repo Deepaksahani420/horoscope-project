@@ -1,4 +1,100 @@
 document.addEventListener("DOMContentLoaded", () => {
+      // Generalized popup hover logic for all nav buttons
+      const navPopupMap = {
+        problem: {
+          link: '.nav__list a[href="#problem"]',
+          backdrop: '#problemPopupBackdrop',
+          popup: '.problem-popup-below-nav'
+        },
+        solution: {
+          link: '.nav__list a[href="#solution"]',
+          backdrop: '#howItWorksPopupBackdrop',
+          popup: '.howitworks-popup-below-nav'
+        },
+        services: {
+          link: '.nav__list a[href="#services"]',
+          backdrop: '#servicesPopupBackdrop',
+          popup: '.services-popup-below-nav'
+        },
+        testimonials: {
+          link: '.nav__list a[href="#testimonials"]',
+          backdrop: '#resultsPopupBackdrop',
+          popup: '.results-popup-below-nav'
+        },
+        faq: {
+          link: '.nav__list a[href="#faq"]',
+          backdrop: '#faqPopupBackdrop',
+          popup: '.faq-popup-below-nav'
+        }
+      };
+
+      Object.values(navPopupMap).forEach(({ link, backdrop, popup }) => {
+        const navLinks = document.querySelectorAll(link);
+        const popupBackdrop = document.querySelector(backdrop);
+        let popupHover = false;
+        let linkHover = false;
+
+        function alignPopupToNav(linkEl) {
+          const popupEl = document.querySelector(popup);
+          if (popupEl && linkEl) {
+            const wasHidden = !popupEl.offsetParent;
+            if (wasHidden) {
+              popupEl.style.visibility = 'hidden';
+              popupEl.style.display = 'block';
+            }
+            const rect = linkEl.getBoundingClientRect();
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const popupWidth = popupEl.offsetWidth;
+            popupEl.style.left = (rect.left + scrollLeft + rect.width / 2 - popupWidth / 2) + 'px';
+            // Use nav bar bottom instead of link bottom for consistent gap
+            const navBar = document.querySelector('.site-header');
+            const navBottom = navBar ? navBar.getBoundingClientRect().bottom : rect.bottom;
+            popupEl.style.top = (navBottom + scrollTop + 8) + 'px';
+            if (wasHidden) {
+              popupEl.style.visibility = '';
+              popupEl.style.display = '';
+            }
+          }
+        }
+        function showPopup() {
+          if (popupBackdrop) {
+            popupBackdrop.classList.add('visible');
+            popupBackdrop.setAttribute('aria-hidden', 'false');
+          }
+        }
+        function hidePopup() {
+          if (popupBackdrop) {
+            popupBackdrop.classList.remove('visible');
+            popupBackdrop.setAttribute('aria-hidden', 'true');
+          }
+        }
+        navLinks.forEach((navLink) => {
+          navLink.addEventListener('mouseenter', () => {
+            linkHover = true;
+            alignPopupToNav(navLink);
+            showPopup();
+          });
+          navLink.addEventListener('mouseleave', () => {
+            linkHover = false;
+            setTimeout(() => {
+              if (!popupHover && !linkHover) hidePopup();
+            }, 80);
+          });
+        });
+        if (popupBackdrop) {
+          popupBackdrop.addEventListener('mouseenter', () => {
+            popupHover = true;
+            showPopup();
+          });
+          popupBackdrop.addEventListener('mouseleave', () => {
+            popupHover = false;
+            setTimeout(() => {
+              if (!popupHover && !linkHover) hidePopup();
+            }, 80);
+          });
+        }
+      });
   const body = document.body;
   const yearEl = document.getElementById("year");
   if (yearEl) {
@@ -43,15 +139,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const successEl = document.getElementById("lead-success");
   const firstField = document.getElementById("full-name");
 
-  const openModal = () => {
-    if (!modalBackdrop) return;
-    modalBackdrop.classList.add("modal-backdrop--visible");
-    modalBackdrop.setAttribute("aria-hidden", "false");
-    body.classList.add("modal-open");
-    setTimeout(() => {
-      firstField?.focus();
-    }, 120);
-  };
+ const openModal = () => {
+  if (!modalBackdrop) return;
+
+  // 🔥 RESET SUCCESS STATE EVERY TIME MODAL OPENS
+  if (successEl) {
+    successEl.textContent = "";
+    successEl.classList.remove("form__success--visible");
+  }
+
+  // Optional: clear previous errors
+  document.querySelectorAll(".form__error").forEach((el) => {
+    el.textContent = "";
+  });
+
+  modalBackdrop.classList.add("modal-backdrop--visible");
+  modalBackdrop.setAttribute("aria-hidden", "false");
+  body.classList.add("modal-open");
+
+  setTimeout(() => {
+    firstField?.focus();
+  }, 120);
+};
 
   const closeModal = () => {
     if (!modalBackdrop) return;
@@ -145,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
       successEl.textContent = "";
       successEl.classList.remove("form__success--visible");
 
-      setTimeout(() => {
+    setTimeout(() => {
         successEl.textContent =
           "✨ Your request has been received. Your personalized future report will be prepared and shared with you shortly.";
         successEl.classList.add("form__success--visible");
@@ -162,6 +271,12 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: "smooth",
           block: "center",
         });
+
+        // Close modal and return to page after 2 seconds
+        setTimeout(() => {
+          closeModal();
+        }, 500);
+
       }, 500);
     });
   }
@@ -249,4 +364,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-

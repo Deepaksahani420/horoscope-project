@@ -1,4 +1,140 @@
+/* Services Popup Styles (below nav) */
+.services-popup-below-nav-backdrop,
+.results-popup-below-nav-backdrop,
+.faq-popup-below-nav-backdrop {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  width: 100vw;
+  height: 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-med);
+}
+.services-popup-below-nav-backdrop.visible,
+.results-popup-below-nav-backdrop.visible,
+.faq-popup-below-nav-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.services-popup-below-nav,
+.results-popup-below-nav,
+.faq-popup-below-nav {
+  background: linear-gradient(135deg, rgba(30,30,40,0.98), rgba(10,10,18,0.98));
+  color: #fff;
+  border: 1.5px solid rgba(160,120,255,0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft), var(--shadow-glow);
+  padding: 2rem 2rem 1.5rem;
+  max-width: 500px;
+  width: 90vw;
+  min-width: 320px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform var(--transition-med), opacity var(--transition-med);
+  margin-top: 0px;
+  position: absolute;
+}
+.services-popup-below-nav-backdrop.visible .services-popup-below-nav,
+.results-popup-below-nav-backdrop.visible .results-popup-below-nav,
+.faq-popup-below-nav-backdrop.visible .faq-popup-below-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
+.services-popup__content,
+.results-popup__content,
+.faq-popup__content {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  color: #fff;
+}
+.problem-popup__content {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+/* How It Works Popup Styles (below nav) */
+.howitworks-popup-below-nav-backdrop {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  width: 100vw;
+  height: 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-med);
+}
+.howitworks-popup-below-nav-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.howitworks-popup-below-nav {
+  background: linear-gradient(135deg, rgba(30,30,40,0.98), rgba(10,10,18,0.98));
+  color: #fff;
+  border: 1.5px solid rgba(160,120,255,0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft), var(--shadow-glow);
+  padding: 2rem 2rem 1.5rem;
+  max-width: 500px;
+  width: 90vw;
+  min-width: 320px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform var(--transition-med), opacity var(--transition-med);
+  margin-top: 0px;
+  position: absolute;
+}
+.howitworks-popup-below-nav-backdrop.visible .howitworks-popup-below-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
+.howitworks-popup__content {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  color: #fff;
+}
+/* Problem Popup Styles (below nav) */
+.problem-popup-below-nav-backdrop {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  width: 100vw;
+  height: 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-med);
+}
+.problem-popup-below-nav-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.problem-popup-below-nav {
+  color: #fff;
+  border: 1.5px solid rgba(160,120,255,0.18);
+  background: linear-gradient(135deg, rgba(30,30,40,0.98), rgba(10,10,18,0.98));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft), var(--shadow-glow);
+  padding: 2rem 2rem 1.5rem;
+  max-width: 500px;
+  width: 90vw;
+  min-width: 320px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform var(--transition-med), opacity var(--transition-med);
+  margin-top: 0px;
+  position: absolute;
+}
+.problem-popup-below-nav-backdrop.visible .problem-popup-below-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 :root {
+  --popup-gap: 0px;
   --bg-primary: #0a0a0a;
   --bg-secondary: #121212;
   --accent: #6c2dc7;
@@ -69,12 +205,10 @@ button {
 }
 
 /* Header */
-
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
-  backdrop-filter: blur(18px);
   background: linear-gradient(
     to bottom,
     rgba(5, 5, 10, 0.92),
@@ -83,7 +217,6 @@ button {
   );
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
-
 .site-header__inner {
   max-width: 1120px;
   margin: 0 auto;
@@ -821,6 +954,77 @@ button {
 .site-footer__copyright {
   margin: 0;
   font-size: 0.8rem;
+}
+
+/* ===== CENTERED FOOTER (FINAL FIX) ===== */
+
+.site-footer {
+  background: #050508;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3rem 0 2.5rem;
+  font-size: 0.85rem;
+}
+
+.site-footer__centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+/* Logo */
+.site-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.site-footer__logo .logo__icon {
+  width: 34px;
+  height: 34px;
+}
+
+/* Tagline */
+.site-footer__tagline {
+  max-width: 720px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer nav */
+.site-footer__nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-footer__nav a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.site-footer__nav a:hover {
+  color: var(--accent-soft);
+}
+
+/* Disclaimer */
+.site-footer__disclaimer {
+  max-width: 900px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Copyright */
+.site-footer__copyright {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
 }
 
 /* Modal */

@@ -22,6 +22,64 @@
   </head>
   <body>
     <div class="page-wrapper">
+              <!-- Problem Popup Modal (centered, as before) -->
+              <div class="problem-popup-below-nav-backdrop" id="problemPopupBackdrop" aria-hidden="true">
+                <div class="problem-popup-below-nav" role="dialog" aria-modal="true" aria-labelledby="problemPopupTitle">
+                  <h2 id="problemPopupTitle">Problems</h2>
+                  <div class="problem-popup__content">
+                    <p>Life decisions feel heavier when the future looks blurry. Most horoscopes are vague, generic, and never truly about you. Our Problems section highlights the real uncertainties you face in career, love, and finances—so you can get clarity and move forward with confidence.</p>
+                  </div>
+                </div>
+              </div>
+          <!-- Problem Popup Modal (positioned below nav) -->
+          <div class="problem-popup-below-nav-backdrop" id="problemPopupBackdrop" aria-hidden="true">
+            <div class="problem-popup-below-nav" role="dialog" aria-modal="true" aria-labelledby="problemPopupTitle">
+              <h2 id="problemPopupTitle">Problems</h2>
+              <div class="problem-popup__content">
+                <p>Life decisions feel heavier when the future looks blurry. Most horoscopes are vague, generic, and never truly about you. Our Problems section highlights the real uncertainties you face in career, love, and finances—so you can get clarity and move forward with confidence.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- How It Works Popup Modal (positioned below nav) -->
+          <div class="howitworks-popup-below-nav-backdrop" id="howItWorksPopupBackdrop" aria-hidden="true">
+            <div class="howitworks-popup-below-nav" role="dialog" aria-modal="true" aria-labelledby="howItWorksPopupTitle">
+              <h2 id="howItWorksPopupTitle">How It Works</h2>
+              <div class="howitworks-popup__content">
+                <p>Our AI analyzes your birth details to generate a personalized horoscope, offering instant insights into your love life, career, and finances. Just enter your information, and let our advanced algorithms reveal your unique future path!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Popup Modal (positioned below nav) -->
+          <div class="services-popup-below-nav-backdrop" id="servicesPopupBackdrop" aria-hidden="true">
+            <div class="services-popup-below-nav" role="dialog" aria-modal="true" aria-labelledby="servicesPopupTitle">
+              <h2 id="servicesPopupTitle">Services</h2>
+              <div class="services-popup__content">
+                <p>Explore our range of personalized astrology services, from daily horoscopes to in-depth future analysis. Each service is designed to give you clarity and confidence in every area of your life.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Popup Modal (positioned below nav) -->
+          <div class="results-popup-below-nav-backdrop" id="resultsPopupBackdrop" aria-hidden="true">
+            <div class="results-popup-below-nav" role="dialog" aria-modal="true" aria-labelledby="resultsPopupTitle">
+              <h2 id="resultsPopupTitle">Results</h2>
+              <div class="results-popup__content">
+                <p>See real stories and testimonials from users who have found guidance and transformation through our AI-powered horoscopes. Your results could be next!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Popup Modal (positioned below nav) -->
+          <div class="faq-popup-below-nav-backdrop" id="faqPopupBackdrop" aria-hidden="true">
+            <div class="faq-popup-below-nav" role="dialog" aria-modal="true" aria-labelledby="faqPopupTitle">
+              <h2 id="faqPopupTitle">FAQ</h2>
+              <div class="faq-popup__content">
+                <p>Find answers to the most common questions about our AI horoscope platform, privacy, and how to get the most accurate predictions for your future.</p>
+              </div>
+            </div>
+          </div>
       <header class="site-header">
         <div class="site-header__inner">
           <a href="#hero" class="logo" aria-label="AI Horoscope Home">
@@ -460,35 +518,43 @@
           </div>
         </section>
       </main>
+<footer class="site-footer">
+  <div class="container site-footer__centered">
 
-      <footer class="site-footer">
-        <div class="container site-footer__inner">
-          <div class="site-footer__brand">
-            <span class="logo__icon">✦</span>
-            <span class="logo__text">HorroScope AI</span>
-            <p class="site-footer__about">
-              AI-powered astrological insights designed to help you move
-              forward with more clarity, confidence, and self-trust.
-            </p>
-          </div>
-          <div class="site-footer__links">
-            <a href="#about">About</a>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-        <div class="site-footer__bottom">
-          <p class="site-footer__disclaimer">
-            This website provides astrological insights for entertainment
-            purposes only. It is not a substitute for professional medical,
-            legal, financial, or psychological advice.
-          </p>
-          <p class="site-footer__copyright">
-            © <span id="year"></span> HorroScope AI. All rights reserved.
-          </p>
-        </div>
-      </footer>
+    <!-- Logo -->
+    <div class="site-footer__logo">
+      <span class="logo__icon">✦</span>
+      <span class="logo__text">HorroScope AI</span>
+    </div>
+
+    <!-- Tagline -->
+    <p class="site-footer__tagline">
+      AI-powered astrological insights designed to help you move forward with
+      more clarity, confidence, and self-trust.
+    </p>
+
+    <!-- Footer links -->
+    <nav class="site-footer__nav">
+      <a href="#about">About</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Disclaimer -->
+    <p class="site-footer__disclaimer">
+      This website provides astrological insights for entertainment purposes
+      only. It is not a substitute for professional medical, legal, financial,
+      or psychological advice.
+    </p>
+
+    <!-- Copyright -->
+    <p class="site-footer__copyright">
+      © <span id="year"></span> HorroScope AI. All rights reserved.
+    </p>
+
+  </div>
+</footer>
     </div>
 
     <!-- Lead Capture Modal -->
